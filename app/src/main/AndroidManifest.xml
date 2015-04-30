@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mattias.assignment_3" >
+    package="com.example.marcus.pfi3_casandra_g_b_assignment3" >
 
     <!-- gives the application access to the internet. -->
     <uses-permission android:name="android.permission.INTERNET"/>

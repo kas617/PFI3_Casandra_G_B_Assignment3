@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
 android:gravity="center_vertical|left"
-        android:text="KD323B"
+        android:text="PFI3-Assignment3"
         android:id="@+id/depTimeDev"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="4dp"
