@@ -86,13 +86,7 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
     }
 
     private void searchFinished() {
-        /* TextView tw = (TextView) getView().findViewById(R.id.boo);
-        tw.setText("search_finished" + myItems.size());
-        for (Journey j : myItems) {
-            tw.append("From" + j.getStartStation().getStationName()
-                    + " To: " + j.getEndStation()
-                    + " leaves : " + j.getTimeToDeparture() + "\n");
-        }*/
+
     }
 
     @Override
