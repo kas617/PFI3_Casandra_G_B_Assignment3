@@ -41,7 +41,7 @@ public class Adapter extends BaseExpandableListAdapter {
         convertView = li.inflate(R.layout.list_collapsed, null);
 
         ImageView arrTime = (ImageView) convertView.findViewById(R.id.travelMinutes);
-        //String arrival = j.get(groupPosition).getTimeToDeparture();
+
         if (j.get(groupPosition).getDepTimeDeviation() == "") {
             arrival = " ";
             anyDeviation = "";
@@ -52,12 +52,10 @@ public class Adapter extends BaseExpandableListAdapter {
             arrTime.setImageResource(R.drawable.error);
         }
 
-        // USE ONLY WITH TEXTVIEW -> arrTime.setText(arrival);
+
 
 
         TextView depTime = (TextView) convertView.findViewById(R.id.depTimeDev);
-        // String departure = "Depature: " +j.get(groupPosition).getDepTimeDeviation().toString();
-        // depTime.setText(departure);
 
         String departure = j.get(groupPosition).getTimeToDeparture().toString() + " minuter";
         depTime.setText(departure);

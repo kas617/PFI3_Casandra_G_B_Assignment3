@@ -20,10 +20,6 @@ import com.example.marcus.pfi3_casandra_g_b_assignment3.control.Parser;
 
 import java.util.ArrayList;
 
-// changed stuff!!!!
-/**
- * A simple {@link Fragment} subclass.
- */
 public class SearchFragment extends Fragment implements AdapterView.OnItemSelectedListener {
     private Spinner spinnerFrom;
     private Spinner spinnerTo;
@@ -33,14 +29,13 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
     private Adapter myAdapter;
 
     public SearchFragment() {
-        // Required empty public constructor
+        // Requires empty constructor
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.refresh:
-                // String searchURL = Constants.getURL("80000", "93070", 14); //Malmö C = 80000,  Malmö Gatorg 80100, Hässleholm C 93070
 
 
                 spinnerFrom.setOnItemSelectedListener(this);
@@ -48,7 +43,6 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
 
                 int fromStation = spinnerFrom.getSelectedItemPosition();
                 int toSTation = spinnerTo.getSelectedItemPosition();
-                //String searchURL = Constants.getURL("80000", "93070", 10); //Malmö C = 80000,  Malmö GAtorg 80100, Hässleholm C 93070
                 String[] stationNo = getResources().getStringArray(R.array.stationNumbers);
                 searchURL = Constants.getURL( stationNo[fromStation], stationNo[toSTation], 14);
                 new MyAsyncTask().execute(searchURL);
@@ -61,7 +55,7 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflates the layout on this fragment
         View view = inflater.inflate(R.layout.fragment_travels,
                 container, false);
 
@@ -100,7 +94,7 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
         String[] stationNo = getResources().getStringArray(R.array.stationNumbers);
         String searchURL = Constants.getURL(stationNo[fromStation], stationNo[toSTation], 14);
         new MyAsyncTask().execute(searchURL);
-        // This is from On Create
+        // Belongs to On Create
 
     }
 
@@ -115,7 +109,7 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
 
         @Override
         protected Long doInBackground(String... params) {
-            Journeys journeys = Parser.getJourneys(params[0]); //There can be many in the params Array
+            Journeys journeys = Parser.getJourneys(params[0]);
             String param1 = params[0];
             myItems.clear();
             myItems.addAll(journeys.getJourneys());
@@ -123,11 +117,12 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
         }
 
 
-        protected void onPostExecute(Long result) { //Called when the AsyncTask is all done
-            //myAdapter.notifyDataSetInvalidated();
+        protected void onPostExecute(Long result) { //This is called when AsyncTask is done
+
             myAdapter.notifyDataSetChanged();
-            // searchFinished();
-            Log.i("isak", "myItems sixe: " + String.valueOf(myItems.size()));
+
+
+            Log.i("Kas", "myItems: " + String.valueOf(myItems.size()));
         }
     }
 }

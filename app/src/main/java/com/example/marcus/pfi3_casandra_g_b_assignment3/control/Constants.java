@@ -14,36 +14,18 @@ public class Constants {
     public static int nbrResultsToGet = 25;
 
 
-    /**
-     * Build the Querystringz
-     * @param startStationNumber from sk�netrafiken
-     * @param endStationNumber from sk�netrafiken
-     * @param date for first start from in form yyyy-mm-dd
-     * @param time in format hh:mm 24 H
-     * @param nbrResults max 20
-     * */
     public static String getURL(String startStationNumber, String endStationNumber  , String date, String time, int nbrResults){
         String nbrRes = String.valueOf(nbrResults);
         String url = baseURL + queryURL + pipe+startStationNumber + pipe + midPartURL +pipe + endStationNumber + pipe + lastPartURL + date + space + time+noOfResults+nbrRes;
         return url;
     }
 
-    /**
-     * Build the Querystringz
-     * @param startStationNumber from sk�netrafiken
-     * @param endStationNumber from sk�netrafiken
-     * @param nbrResults max 20 from now
-     * */
-    public static String getURL(String startStationNumber, String endStationNumber, int nbrResults){
+     public static String getURL(String startStationNumber, String endStationNumber, int nbrResults){
         String nbrRes = String.valueOf(nbrResults);
         String url = baseURL + queryURL + pipe+startStationNumber + pipe + midPartURL +pipe + endStationNumber + pipe + "0"+ noOfResults+nbrRes;
         return url;
     }
 
-    /**
-     * Build the StationresultURL
-     * @param station from sk�netrafiken
-     * */
     public static String getStationResultURL(Station station){
         String url = baseURL + stationResultURL +station.getStationNbr();
         return url;

@@ -27,7 +27,5 @@ public class Line {
         this.depTimeDeviation = depTimeDeviation;
     }
 
-    //More methods here for the rest of the tags
-    //And perhaps some special methods ????
 
 }
