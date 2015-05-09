@@ -1,7 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mattias.assignment_3.SearchFragment"
+    tools:context="com.example.marcus.pfi3_casandra_g_b_assignment3.SearchFragment"
     android:background="#ffffffff"
     >
 
