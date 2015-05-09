@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.R;
+
 import com.example.marcus.pfi3_casandra_g_b_assignment3.control.Journey;
 
 import java.util.ArrayList;

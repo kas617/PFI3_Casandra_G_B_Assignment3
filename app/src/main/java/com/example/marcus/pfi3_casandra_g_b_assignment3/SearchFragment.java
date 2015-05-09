@@ -20,16 +20,14 @@ import com.example.marcus.pfi3_casandra_g_b_assignment3.control.Parser;
 
 import java.util.ArrayList;
 
-import android.R;
-
 // changed stuff!!!!
 /**
- * A simple {@link android.app.Fragment} subclass.
+ * A simple {@link Fragment} subclass.
  */
 public class SearchFragment extends Fragment implements AdapterView.OnItemSelectedListener {
     private Spinner spinnerFrom;
     private Spinner spinnerTo;
-private String searchURL;
+    private String searchURL;
 
     private ArrayList<Journey> myItems = new ArrayList<Journey>();
     private Adapter myAdapter;
@@ -109,7 +107,7 @@ private String searchURL;
 
 
         // TextView tw = (TextView) getView().findViewById(R.id.boo);
-    // Debugging
+        // Debugging
         // tw.append(
 //                 "Heyo!");
 // FROM ONCREATE
