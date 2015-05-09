@@ -91,28 +91,16 @@ public class SearchFragment extends Fragment implements AdapterView.OnItemSelect
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        // String[] courses = getActivity().getResources().getStringArray(R.array.stationNumbers);
-        // String course = courses[position];
-        // Log.i("ExpFragment", "Course. " + course);
-        // String searchURL = Constants.getURL("80000", "93070", 14);
-        // TEMP MyAsyncTask myAsyncTask = new MyAsyncTask();
-        // TEMP myAsyncTask.execute(searchURL);
 
-
-
-        // TextView tw = (TextView) getView().findViewById(R.id.boo);
-        // Debugging
-        // tw.append(
-//                 "Heyo!");
-// FROM ONCREATE
 
         int fromStation = spinnerFrom.getSelectedItemPosition();
         int toSTation = spinnerTo.getSelectedItemPosition();
-        //String searchURL = Constants.getURL("80000", "93070", 10); //Malmö C = 80000,  Malmö GAtorg 80100, Hässleholm C 93070
+
+
         String[] stationNo = getResources().getStringArray(R.array.stationNumbers);
         String searchURL = Constants.getURL(stationNo[fromStation], stationNo[toSTation], 14);
         new MyAsyncTask().execute(searchURL);
-        // FROM ONCREATE!
+        // This is from On Create
 
     }
 
